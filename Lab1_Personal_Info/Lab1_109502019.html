@@ -1,0 +1,118 @@
+<head>
+	<title>intro</title>
+</head>
+
+<body>
+	<table border="1">
+			<tr>
+		<th colspan="3">about--109502019</th> <!-- column 1 -->
+	</tr>
+
+	<!-- row 2 -->
+	<tr>
+		<td rowspan="3">
+			<img src="https://i.pinimg.com/736x/c9/d3/5d/c9d35de7f4d1b93933ef7b12c740701c.jpg" width="150" height="106"><br>
+			personal photo
+		</td> <!-- column 1 -->
+		<td colspan="2">
+			Name: <input type="text" name="username" placeholder="請輸入姓名"><br>
+			Gender: 
+    		<input type="radio" name="gender" value="Male" id="male">
+    		<label for="male">Male</label>
+
+    		<input type="radio" name="gender" value="Female" id="female">
+    		<label for="female">Female</label>
+
+    		<input type="radio" name="gender" value="Other" id="other">
+    		<label for="other">Other</label>
+		</td> <!-- column 2 -->
+	</tr>
+
+	<!-- row 3 -->
+	<tr>
+    	<td>
+    		Country:
+    		<select name="country">
+       			<option value="Taipei">Taipei</option>
+        		<option value="Tainan">Tainan</option>
+        		<option value="Taichung">Taichung</option>
+        		<option value="Taoyuan">Taoyuan</option>
+    		</select>
+    	</td>
+    	<td>Birthday: <input type="date" name="birthday"> </td>
+	</tr>
+
+	<!-- row 4 -->
+	<tr>
+		<td colspan="2">
+			Email: <input type="email" name="email" placeholder="請輸入 Email" required>
+		</td> <!-- column 2 -->
+	</tr>
+
+
+
+
+
+	<tr>
+		<th>Hobby</th>
+		<td colspan="2">
+			 <input type="checkbox" name="activity" value="Swimming" id="swimming">
+    		<label for="swimming">Swimming</label>
+
+    		<input type="checkbox" name="activity" value="Volleyball" id="volleyball">
+    		<label for="volleyball">Volleyball</label>
+
+    		<input type="checkbox" name="activity" value="Movie" id="movie">
+    		<label for="movie">Movie</label>
+
+    		<input type="checkbox" name="activity" value="Game" id="game">
+    		<label for="game">Game</label>
+
+    		<input type="checkbox" name="activity" value="Sleep" id="sleep">
+    		<label for="sleep">Sleep</label>
+		</td>
+	</tr>
+
+
+	<tr>
+		<th>Skill</th>
+		<td colspan="2">
+			<input type="checkbox" name="skill" value="Java" id="java">
+    		<label for="java">Java</label>
+
+    		<input type="checkbox" name="skill" value="HTML" id="html">
+    		<label for="html">HTML</label>
+
+    		<input type="checkbox" name="skill" value="Python" id="python">
+    		<label for="python">Python</label>
+
+    		<input type="checkbox" name="skill" value="Microsoft Office" id="office">
+    		<label for="office">Microsoft Office</label>
+
+    		<input type="checkbox" name="skill" value="Premiere" id="premiere">
+    		<label for="premiere">Premiere</label>
+		</td>
+	</tr>
+
+	<tr>
+		<th>Say Something</th>
+		<td colspan="2">
+			<input type="text" name="username" placeholder="say something here.">
+		</td>
+	</tr>
+
+	<tr>
+		<th colspan="3">
+			<input type = "submit" value = "提交">
+			<input type = "reset" value = "重設"> 
+		</th>
+
+</table>
+
+			
+
+			<!--input type 要設成EMAIL、tr是table row 是表格中一列一列的意思、td是table header所以是粗體、而td是table data所以是一般的粗細-->
+
+			<!--照片需要設定alternative text 也就是如果找片跑不出來的話會有一句話跟你說照片跑不出來-->
+
+</body>
