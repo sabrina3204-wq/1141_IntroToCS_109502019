@@ -1,0 +1,97 @@
+/* (6)(7) body attributes */
+body {
+    color: #333;/* 文字顏色 */
+    background-color: #f3f3f3; /* 背景顏色 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.header {
+    background-color: #2e9ad0;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* (9) Heading element font family */
+.page-title {
+    font-family: Georgia, serif;
+    text-align: center;
+    background-color: #2e9ad0;
+    color: white;
+    padding: 40px;
+    margin: 0;
+}
+
+/* NAVBAR */
+
+/* (4) class navbar */
+/* (10) position */
+/* (11) top / left / width (em units) */
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    background-color: #2c3e50;
+
+    display: flex;
+    justify-content: space-around; /* 平均分佈 */
+
+    position: relative;
+    top: 1em;
+    left: 0;
+
+    width: 100%; /* 讓導覽列延伸整個頁面寬度 */
+    color: white;
+    font-weight: bold;
+
+.navbar li {
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 2em;
+    left: 0;
+    background-color: #2c3e50;
+    list-style: none;
+    padding: 10px;
+    width: 12em;
+    border-radius: 6px;
+}
+
+.dropdown-menu li {
+    padding: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* (13) MEDIA TYPES ------------------------------------- */
+
+@media all {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+        font-size: 12px;
+    }/* 適用所有媒體（手機、平板等）的樣式 */
+
+    .navbar, .dropdown-menu {
+        display: none; /* 列印的時候不印出導覽列 */
+    }
+}
