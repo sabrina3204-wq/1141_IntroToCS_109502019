@@ -1,62 +1,45 @@
-/* =========================================================== */
-/* PAGE BACKGROUND                                              */
-/* =========================================================== */
 body {
-    background-color: #dfe8f5;   /* ← 修改整頁背景 */
+    background-color: #dfe8f5;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* =========================================================== */
-/* MAIN CONTAINER（整個外框）                                   */
-/* =========================================================== */
 .main-container {
-    width: 1000px;              /* ← 可調整整體寬度 */
-    margin: 20px auto;          /* ← 置中 */
-    background-color: #ffffff;  /* ← 內容背景色可改 */
-    display: flex;              /* ← 左右分欄 */
-    border-radius: 30px;        /* ← 圓角 */
+    width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 0 12px rgba(0,0,0,0.15); /* ← 陰影 */
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
 }
 
-/* =========================================================== */
-/* LEFT PANEL                                                   */
-/* =========================================================== */
 .left-panel {
-    width: 30%;              /* ← 左側佔整體 30%，可調整 */
+    width: 30%;
     background-color: #4c8fd9;
     color: white;
 }
 
-/* 上方照片 */
 .photo-panel img {
-    width: 100%;             /* ← 圖片填滿左欄 */
+    width: 100%;
 }
 
-/* 下方文字區 */
 .text-content {
     padding: 15px;
 }
 
-/* 學校Logo */
 .NCCU-logo {
     width: 20%;
     display: block;
     margin: 20px auto 0;
 }
 
-/* =========================================================== */
-/* RIGHT PANEL                                                  */
-/* =========================================================== */
 .right-panel {
-    width: 70%;             /* ← 右側佔整體 70% */
+    width: 70%;
     padding: 20px;
 }
 
-/* =========================================================== */
-/* SECTION TITLE                                                */
-/* =========================================================== */
+
 .section-title {
     font-size: 20px;
     font-weight: bold;
@@ -65,22 +48,16 @@ body {
     margin-bottom: 15px;
 }
 
-/* =========================================================== */
-/* EDUCATION SECTION                                            */
-/* =========================================================== */
 .edu-item {
     margin-bottom: 8px;
 }
 
 .year {
     display: inline-block;
-    width: 120px;        /* ← 年份欄寬度可改 */
+    width: 120px;
     font-weight: bold;
 }
 
-/* =========================================================== */
-/* SKILL TAGS                                                   */
-/* =========================================================== */
 .tag {
     display: inline-block;
     padding: 5px 12px;
@@ -91,9 +68,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* =========================================================== */
-/* HOMEWORK & LAB                                               */
-/* =========================================================== */
 .hw-lab-box {
     display: flex;
     gap: 15px;
@@ -109,7 +83,7 @@ body {
 .hw-column a,
 .lab-column a {
     color: #003d8f;
-    text-decoration: none;     /* ← 移除底線 */
+    text-decoration: none;
 }
 
 /* 滑過效果 */
@@ -118,9 +92,6 @@ body {
     text-decoration: underline;
 }
 
-/* =========================================================== */
-/* FAVORITE MUSIC                                               */
-/* =========================================================== */
 .music-row {
     display: flex;
     justify-content: space-between;
@@ -129,7 +100,7 @@ body {
 }
 
 .music-item img {
-    width: 80px;              /* ← 圖片大小可調整 */
+    width: 80px;
     margin-bottom: 8px;
     border-radius: 10px;
 }
@@ -140,7 +111,6 @@ body {
     width: 22%;
 }
 
-/* 底下說明 */
 .music-note {
     text-align: center;
     margin-top: 12px;
