@@ -7,7 +7,6 @@
 
 <h1>109502019_Number Guessing Game</h1>
 
-<!-- 空 div：最後要放圖片 -->
 <div id="result"></div>
 
 <script>
@@ -20,21 +19,18 @@
 
     while (chances > 0) {
 
-        // 提示用戶目前範圍 + 剩餘次數
         var input = window.prompt(
             "請輸入數字 (" + min + " 到 " + max + ")\n" +
             "剩餘次數：" + chances
         );
 
-        // ********** input 檢查 **********
 
-        // 取消或空白
         if (input === null || input.trim() === "") {
             alert("輸入不得為空！");
             continue;
         }
 
-        // 非數字
+
         if (isNaN(input)) {
             alert("請輸入有效的數字！");
             continue;
@@ -42,13 +38,11 @@
 
         var guess = Number(input);
 
-        // 過界
         if (guess < min || guess > max) {
             alert("超出範圍！請輸入 " + min + " ~ " + max + " 之間的數字！");
             continue;
         }
 
-        // ********** 判斷大小 **********
         chances--;
 
         if (guess === answer) {
@@ -64,7 +58,6 @@
             min = guess + 1;
         }
 
-        // ********** 次數用完 **********
         if (chances === 0) {
             alert("很可惜，答案是：" + answer);
             document.getElementById("result").innerHTML =
