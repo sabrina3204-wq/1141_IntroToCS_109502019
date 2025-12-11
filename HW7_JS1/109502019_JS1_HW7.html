@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bulls and Cows Game</title>
+</head>
+<body>
+
+<h1>109502019_HW6_1A2B</h1>
+
+<input type="text" id="guessInput" placeholder="Enter 4 digits">
+<button onclick="play()">Guess</button>
+
+<h3>Records:</h3>
+<div id="records"></div>
+
+<script>
+
+// Generate answer with 4 unique digits
+function generateAnswer() {
+    let pool = ['0','1','2','3','4','5','6','7','8','9'];
+    let ans = "";
+
+    while (ans.length < 4) {
+        let index = Math.floor(Math.random() * pool.length);
+        ans += pool[index];
+        pool.splice(index, 1); // remove used digit
+    }
+    return ans;
+}
+
+let answer = generateAnswer();
+let attempts = 0;
+
+
+
+// Validate input
+function isValid(str) {
+    if (str.length !== 4) return false;            // must be 4 digits
+    if (!/^\d{4}$/.test(str)) return false;        // must be digits
+    let set = new Set(str);
+    return set.size === 4;                         // no repeated digits
+}
+
+
+// Calculate A/B
+function checkAB(guess, ans) {
+    let A = 0;
+    let B = 0;
+
+    for (let i = 0; i < 4; i++) {
+        if (guess[i] === ans[i]) {
+            A++;
+        } else if (ans.includes(guess[i])) {
+            B++;
+        }
+    }
+    return `${A}A${B}B`;
+}
+
+
+// Play function
+function play() {
+    let inputField = document.getElementById("guessInput");
+    let guess = inputField.value.trim();
+
+    // Validate input
+    if (!isValid(guess)) {
+        alert("Invalid input! Enter 4 **non-repeating** digits.");
+        inputField.value = "";
+        return;
+    }
+
+    attempts++;
+
+    let result = checkAB(guess, answer);
+
+    // Record the attempt
+    let recordDiv = document.getElementById("records");
+    recordDiv.innerHTML += `<p>Guess ${attempts}: ${guess} → ${result}</p>`;
+
+    // Check if correct
+    if (result === "4A0B") {
+        alert(`Correct! You got it in ${attempts} attempts!`);
+        // Reset game
+        answer = generateAnswer();
+        attempts = 0;
+        recordDiv.innerHTML += "<hr>";
+    }
+
+    inputField.value = ""; // clear input
+}
+</script>
+
+</body>
+</html>
